@@ -324,7 +324,7 @@ class User extends Component{
               <div className="container-fluid mt-5 text-center">
               <br></br>
                 <h1>Welcome to IUHBANK</h1>
-                <h4>Trong tài khoản bạn có : Ether gửi: {this.state.bankBanlace / (10**18)}, Token: {this.state.TokenBalance / (10**18)} </h4>
+                <h4>Trong tài khoản bạn có : Ether gửi: {this.state.bankBanlace / (10**18)}, Token: {this.state.TokenBalance / (10**32)} </h4>
                 <h4>
                   <button type='submit' onClick={this.logout.bind(this)}className='btn btn-primary'>Đăng xuất</button>
                 </h4>
@@ -574,7 +574,7 @@ class User extends Component{
                                                   <input
                                                   type='text'
                                                   className="form-control form-control-md"
-                                                  placeholder= {lendercon.payOffAmount } 
+                                                  placeholder= {lendercon.payOffAmount / (10** 18) } 
                                                   disabled/>
                                                 </Col>
                                                 </Row>
